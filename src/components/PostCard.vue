@@ -35,16 +35,17 @@ export default {
   position: relative;
 
   &__header {
-    margin-left: calc(var(--space) * -1);
-    margin-right: calc(var(--space) * -1);
-    margin-bottom: calc(var(--space) / 2);
-    margin-top: calc(var(--space) * -1);
     overflow: hidden;
+    width: 100%;
     border-radius: var(--radius) var(--radius) 0 0;
 
     &:empty {
       display: none;
     }
+  }
+
+  &__content {
+    padding: calc(var(--space) / 2);
   }
 
   &__image {

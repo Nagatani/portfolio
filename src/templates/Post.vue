@@ -84,6 +84,9 @@ query Post ($id: ID!) {
 }
 
 .post {
+  &.content-box {
+    padding: calc(var(--space) / 2);
+  }
 
   &__header {
     width: calc(100% + var(--space) * 2);

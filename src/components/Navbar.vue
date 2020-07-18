@@ -56,17 +56,16 @@ query {
     text-decoration: none;
     color: var(--body-color) !important;
     font-family: 'Norican', cursive;
+    pointer-events: all;
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
     transform: rotate(-10deg);
     position: relative;
-    z-index: -3;
     text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
     &__text {
       font-size: 2rem;
       line-height: 1;
-
     }
     &__description {
       font-size: .8rem;
@@ -77,11 +76,16 @@ query {
     top: 0;
     right: 0;
     width: 100%;
+    pointer-events: none;
 
     #menu-button {
       height: 0;
       display: none;
       visibility: hidden;
+      pointer-events: all;
+    }
+    label[for="menu-button"] {
+      pointer-events: all;
     }
     .menu-trigger,
     .menu-trigger span {
@@ -120,6 +124,7 @@ query {
       &::after {
         content: "";
         position: absolute;
+        pointer-events: none;
         top: 0;
         right: 0;
         transition: all 1s;
@@ -189,6 +194,7 @@ query {
   &::before {
     content: "";
     position: absolute;
+    pointer-events: none;
     top: 0;
     bottom: 0;
     right: 0;
@@ -204,6 +210,7 @@ query {
   &::after {
     content: "";
     position: absolute;
+    pointer-events: none;
     top: 0;
     right: 0;
     transition: all 1s;

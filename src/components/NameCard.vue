@@ -1,12 +1,12 @@
 <template>
-	<div class="author">
-		<section class="author__info">
+	<div class="namecard">
+		<section class="namecard__info">
 			<div>
-				<p class="author__intro">猫になって静かに暮らしたいプログラマ</p>
+				<p class="namecard__intro">猫になって静かに暮らしたいプログラマ</p>
 				<h2>Hidehiro Nagatani</h2>
 			</div>
 
-			<p class="author__links">
+			<p class="namecard__links">
 				<ul>
 					<li><a href="mailto:hey@nagatani.me"><span class="ti ti-mail"></span> hey@nagatani.me</a></li>
 					<li><a href="//twitter.com/Nagatani"><span class="ti ti-brand-twitter"></span> @Nagatani</a></li>
@@ -14,13 +14,13 @@
 				</ul>
 			</p>
 
-			<p class="author__snsicons">
-				<a href="//twitter.com/Nagatani"><g-image alt="twitter icon" class="author__snsicon_tw" src="~/assets/images/tw_prof.jpg" width="200" height="200" blur="5" /></a>
-				<a href="//github.com/Nagatani"><g-image alt="github icon" class="author__snsicon_gh" src="~/assets/images/gh_prof.jpg" width="200" height="200" blur="5" /></a>
+			<p class="namecard__snsicons">
+				<a href="//twitter.com/Nagatani"><g-image alt="twitter icon" class="namecard__snsicon_tw" src="~/assets/images/tw_prof.jpg" width="200" height="200" blur="5" /></a>
+				<a href="//github.com/Nagatani"><g-image alt="github icon" class="namecard__snsicon_gh" src="~/assets/images/gh_prof.jpg" width="200" height="200" blur="5" /></a>
 			</p>
 		</section>
-		<div class="author__image-container">
-			<g-image alt="Author image" class="author__image" src="~/assets/images/author.jpg" width="300" height="300" blur="5" />
+		<div class="namecard__image-container">
+			<g-image alt="namecard image" class="namecard__image" src="~/assets/images/author.jpg" width="300" height="300" blur="5" />
 		</div>
 	</div>
 </template>
@@ -31,34 +31,43 @@ export default {
 </script>
 
 <style lang="scss">
-.author {
+.namecard {
 	
 	margin: var(--space) auto;
 	position: relative;
+	width: 640px;
 	overflow: hidden;
 
 	border: 1px solid var(--dark-012);
 	background: var(--bg-color);
+
 	border-radius: 8px;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   
 	display: flex;
 	justify-content: flex-start;
+
+	&:before {
+    display: block;
+    content: "";
+    padding-top: (55 / 91) * 100%;
+  }
 	
 	&__image-container {
 		position: relative;
-		order: 1;
-		padding: 1rem;
-		padding-right: 0;
+		width: calc(640px - 387px);
 	}
 	&__image {
 		position: relative;
-		border-radius: 100%;
-		width: 10rem;
+		height: 100%;
+		object-fit: cover;
+		object-position: 20% 50%;
+		line-height: 0;
+		display: block;
 	}
 
 	&__info {
-		order: 2;
+		width: 387px;
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
@@ -87,6 +96,8 @@ export default {
 
 
 	&__links {
+		position: absolute;
+		bottom: 1rem;
 		margin: 0;
 		padding-top: 1rem;
 		font-size: .8rem;
@@ -116,10 +127,12 @@ export default {
 	}
 
 	&__snsicons {
+		position: absolute;
+		bottom: calc(1rem - 8px);
+		right: 1rem;
 		text-align: right;
 		margin: 0;
 		padding: 0;
-		line-height: 0;
 		img {
 			box-sizing: content-box;
 			line-height: 1;

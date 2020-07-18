@@ -8,7 +8,7 @@ module.exports = {
   siteName: '@Nagatani',
   siteDescription: 'This web site is Hidehiro Nagatani\'s portfolio site.',
   siteUrl: 'https://nagatani.me/',
-  titleTemplate: '%s',
+  titleTemplate: '%s - @Nagatani',
   icon: 'src/favicon.png',
 
   templates: {

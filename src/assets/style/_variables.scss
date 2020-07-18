@@ -12,7 +12,7 @@ body {
  	--title-color: #111;
  	--link-color: #6b17e6;
  	--border-color:  rgba(0,0,0,.1);;
-  --space: 3.5rem;
+  --space: 4rem;
   --content-width: 860px;
   --header-height: 100vh;
 	--radius: 5px;
@@ -32,22 +32,9 @@ body {
 // Make  things smaller for mobile
 @media screen and (max-width: 650px) {
 	html {
-		--base-font-size: 17px;
+		--base-font-size: 12pt;
 	}
 	body {
-		--space: 1.5rem;
 		--header-height: 60px;
 	}
-}
-
-
-// Override variables for Dark theme
-body[data-theme="dark"] {
- 	--bg-color: #0D2538;
- 	--bg-content-color: #0f2d44;
- 	--bg-code: rgba(0,0,0,.3);
- 	--border-color:  rgba(255,255,255,.1);;
- 	--body-color: #ced8de;
- 	--title-color: #fff;
- 	--link-color: #af9cef;
 }

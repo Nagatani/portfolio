@@ -18,13 +18,12 @@ export default {
 
 <style lang="scss">
 .top-hero {
-  height: 100vh;
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   margin:0;
   background:#181D26;
   background-image: url("/tome.jpg");

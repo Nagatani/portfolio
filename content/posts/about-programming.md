@@ -1,8 +1,6 @@
 ---
-title: Programming skills
-date: 2020-07-17
+title: About Programming
 published: true
-tags: ['Programming','Skill']
 canonical_url: false
 description: "プログラミングスキルのこと"
 ---
@@ -24,4 +22,5 @@ description: "プログラミングスキルのこと"
 兄は別の道へ進んだのですが、私はコンピュータの内部動作や、プログラミングの楽しさがとてもとても気になってしまい、気づいたらプログラマになっていました。
 
 
-まだ書くよ
+
+後で書くよ

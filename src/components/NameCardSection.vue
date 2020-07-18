@@ -4,16 +4,16 @@
     名刺、置いておきます。
     <small>ご連絡は、メールかSNSよりどうぞ。</small>
   </h4>
-  <Author />
+  <NameCard />
 </div>
 </template>
 
 <script>
-import Author from '~/components/Author.vue'
+import NameCard from '~/components/NameCard.vue'
 
 export default {
   components: {
-    Author,
+    NameCard,
   },
 }
 </script> 
@@ -51,7 +51,7 @@ export default {
     }
   }
 
-  .author {
+  .namecard {
     transform: rotate(4deg);
   }
 }

@@ -12,6 +12,7 @@
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.3.0",
     "gridsome": "^0.7.0",
+    "tabler-icons": "^1.10.0",
     "vue-lottie": "^0.2.1"
   },
   "devDependencies": {

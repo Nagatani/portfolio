@@ -25,7 +25,9 @@
       <!-- Add comment widgets here -->
     </div>
 
-    <Author class="post-author" />
+    <div class="post-author">
+      <Author />
+    </div>
 
   </Layout>
 </template>
@@ -119,24 +121,14 @@ query Post ($id: ID!) {
   }
 }
 
-.post-comments {
-  padding: calc(var(--space) / 2);
-
-  &:empty {
-    display: none;
-  }
-}
 
 .main {
   position: relative;
 }
 
 .post-author {
-  z-index: 999;
-  position: absolute;
-  bottom: -640px;
-  left: calc(50% - 320px);
-  margin-top: calc(var(--space) / 2);
+  display: flex;
+  margin: calc(var(--space) / 2) auto;
 }
 .content-box {
   margin-bottom: calc(var(--space) * 2);

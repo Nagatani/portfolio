@@ -30,8 +30,8 @@ export default {
 
 <style lang="scss">
 .post-card {
-  width: calc(100% / 3 - 24px);
-  margin-bottom: var(--space);
+  width: calc(100% / 3 - 2rem);
+  margin: 2rem auto;
   position: relative;
 
   &__header {

@@ -15,7 +15,8 @@
         </svg>
       </div>
       <footer class="footer">
-        <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
+        <p><Lottie class="login-lottie" :options="footerLottie" :height="300" :width="300" :animCreated="handleAnimation" /></p>
+        <span class="footer__copyright">Copyright © 2012-{{ new Date().getFullYear() }} @Nagatani All Rights Reserved. </span>
       </footer>
     </div>
 
@@ -36,6 +37,8 @@ query {
 <script>
 import Navbar from '~/components/Navbar.vue'
 import Logo from '~/components/Logo.vue'
+import Lottie from '~/components/Lottie.vue'
+import * as anime from '~/assets/lottie/3046-me-at-office.json'
 
 export default {
   props: {
@@ -43,7 +46,8 @@ export default {
   },
   components: {
     Navbar,
-    Logo
+    Logo,
+    Lottie,
   },
   metaInfo() {
     return {
@@ -90,6 +94,17 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    footerLottie () {
+      return { animationData: anime }
+    }
+  },
+  methods: {
+    // 追加
+    handleAnimation (anim) {
+      this.anim = anim
+    }
   }
 }
 </script>
@@ -103,9 +118,10 @@ export default {
 .footer {
   background: #2C3E50;
   color: var(--bg-color);
-  height: 30vh;
+  min-height: 60vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: calc(var(--space) / 2);
   text-align: center;
@@ -117,6 +133,19 @@ export default {
 
   a {
     color: currentColor;
+  }
+
+  p {
+    span {
+      font-size: 3rem;
+      display: inline-block;
+      line-height: 1;
+    }
+  }
+
+  &__copyright {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: .75rem;
   }
 }
 .custom-shape-divider-bottom {
@@ -139,5 +168,4 @@ export default {
 .custom-shape-divider-bottom .shape-fill {
     fill: #2C3E50;
 }
-
 </style>

@@ -10,6 +10,9 @@ module.exports = {
   siteUrl: 'https://nagatani.me/',
   titleTemplate: '%s - @Nagatani',
   icon: 'src/favicon.png',
+  metadata: {
+    siteOgImage: `tome.jpg`,
+  },
 
   templates: {
     Post: '/:title',

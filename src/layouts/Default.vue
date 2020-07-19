@@ -55,8 +55,12 @@ export default {
         },
       ],
       meta: [
-        { key: `og:locale`, property: `og:locale`, content: `ja_JP` },
         { key: `og:type`, property: `og:type`, content: `website` },
+        { key: `og:locale`, property: `og:locale`, content: `ja_JP` },
+        {
+          property: 'og:title',
+          content: this.$static.metadata.siteName + ' - Hello, World!!',
+        },
         {
           key: `og:url`,
           property: `og:url`,
@@ -74,6 +78,10 @@ export default {
         },
         {
           name: 'twitter:site',
+          content: this.$static.metadata.siteName,
+        },
+        {
+          name: 'twitter:creator',
           content: this.$static.metadata.siteName,
         },
         {

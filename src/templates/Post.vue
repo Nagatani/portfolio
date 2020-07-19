@@ -50,12 +50,24 @@ export default {
         {
           name: 'description',
           content: this.$page.post.description
-        }
+        },
+        {
+          property: 'og:title',
+          content: this.$static.metadata.siteName + ' - ' + this.$page.post.title,
+        },
       ]
     }
   }
 }
 </script>
+
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
 
 <page-query>
 query Post ($id: ID!) {

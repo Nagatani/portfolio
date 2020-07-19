@@ -11,7 +11,7 @@ module.exports = {
   titleTemplate: '%s - @Nagatani',
   icon: 'src/favicon.png',
   metadata: {
-    siteOgImage: `tome.jpg`,
+    siteOgImage: `https://nagatani.me/tome.jpg`,
   },
 
   templates: {

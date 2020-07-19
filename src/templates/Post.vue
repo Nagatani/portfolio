@@ -4,9 +4,6 @@
       <h1 class="post-title__text">
         {{ $page.post.title }}
       </h1>
-
-      <PostMeta :post="$page.post" />
-
     </div>
 
     <div class="post content-box">
@@ -90,6 +87,7 @@ query Post ($id: ID!) {
 
 <style lang="scss">
 .post-title {
+  font-family: 'Norican', cursive;
   margin-top: calc(var(--space) * 2);
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;

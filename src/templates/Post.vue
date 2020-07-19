@@ -89,9 +89,9 @@ query Post ($id: ID!) {
   }
 
   &__header {
-    width: calc(100% + var(--space) * 2);
-    margin-left: calc(var(--space) * -1);
-    margin-top: calc(var(--space) * -1);
+    width: calc(100% + var(--space));
+    margin-left: calc(var(--space) * -.5);
+    margin-top: calc(var(--space) * -.5);
     margin-bottom: calc(var(--space) / 2);
     overflow: hidden;
     border-radius: var(--radius) var(--radius) 0 0;

@@ -253,7 +253,6 @@ query {
       height: 120px;
     }
     &::after {
-      background: #2c3e50;
       z-index: -4;
     }
   }

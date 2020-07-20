@@ -74,8 +74,8 @@ query {
   .navbar__links {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 100%;
+    left: 0;
+    width: 100vw;
     pointer-events: none;
 
     #menu-button {

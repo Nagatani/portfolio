@@ -45,7 +45,7 @@ query {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -196,10 +196,8 @@ query {
     position: absolute;
     pointer-events: none;
     top: 0;
-    bottom: 0;
-    right: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 140px;
     background: var(--bg-color);
     z-index: -3;
@@ -212,14 +210,14 @@ query {
     position: absolute;
     pointer-events: none;
     top: 0;
-    right: 0;
-    transition: all 1s;
-    width: 100%;
+    left: 0;
+    width: 100vw;
     height: 120px;
     background: #fff;
     z-index: -2;
     transform: skewY(12deg);
     transform-origin: top right;
+    transition: all 1s;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 }
@@ -240,7 +238,7 @@ query {
       #menu-button:checked + .menu-opener {
         &::after {
           transition: all 1s;
-          width: 100%;
+          width: 100vw;
           height: 50vh;
           border-radius: 0;
         }

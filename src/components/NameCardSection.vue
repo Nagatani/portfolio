@@ -35,6 +35,8 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100vw;
+  overflow: hidden;
 
   h4 {
     position: absolute;

@@ -15,7 +15,7 @@
         </svg>
       </div>
       <footer class="footer">
-        <p><Lottie class="login-lottie" :options="footerLottie" :height="300" :width="300" :animCreated="handleAnimation" /></p>
+        <!--<p><Lottie class="login-lottie" :options="footerLottie" :height="300" :width="300" :animCreated="handleAnimation" /></p>-->
         <span class="footer__copyright">Copyright © 2012-{{ new Date().getFullYear() }} @Nagatani All Rights Reserved. </span>
       </footer>
     </div>
@@ -37,8 +37,6 @@ query {
 <script>
 import Navbar from '~/components/Navbar.vue'
 import Logo from '~/components/Logo.vue'
-import Lottie from '~/components/Lottie.vue'
-import * as anime from '~/assets/lottie/3046-me-at-office.json'
 
 export default {
   props: {
@@ -47,7 +45,6 @@ export default {
   components: {
     Navbar,
     Logo,
-    Lottie,
   },
   metaInfo() {
     return {
@@ -95,17 +92,6 @@ export default {
       ]
     }
   },
-  computed: {
-    footerLottie () {
-      return { animationData: anime }
-    }
-  },
-  methods: {
-    // 追加
-    handleAnimation (anim) {
-      this.anim = anim
-    }
-  }
 }
 </script>
 
@@ -118,7 +104,7 @@ export default {
 .footer {
   background: #2C3E50;
   color: var(--bg-color);
-  min-height: 60vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;

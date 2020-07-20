@@ -46,6 +46,7 @@ query {
   top: 0;
   left: 0;
   width: 100vw;
+  max-width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -76,6 +77,7 @@ query {
     top: 0;
     left: 0;
     width: 100vw;
+    max-width: 100%;
     margin: 0;
     pointer-events: none;
 
@@ -199,6 +201,7 @@ query {
     top: 0;
     left: 0;
     width: 100vw;
+    max-width: 100%;
     height: 140px;
     background: var(--bg-color);
     z-index: -3;
@@ -212,6 +215,7 @@ query {
     pointer-events: none;
     top: 0;
     left: 0;
+    max-width: 100%;
     width: 100vw;
     height: 120px;
     background: #fff;
@@ -239,6 +243,7 @@ query {
       #menu-button:checked + .menu-opener {
         &::after {
           transition: all 1s;
+          max-width: 100%;
           width: 100vw;
           height: 50vh;
           border-radius: 0;

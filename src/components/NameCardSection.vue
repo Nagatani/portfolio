@@ -36,6 +36,7 @@ export default {
   align-items: center;
   position: relative;
   width: 100vw;
+  max-width: 100%;
   overflow: hidden;
 
   h4 {

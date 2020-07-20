@@ -76,6 +76,7 @@ query {
     top: 0;
     left: 0;
     width: 100vw;
+    margin: 0;
     pointer-events: none;
 
     #menu-button {

@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss">
 .name-card {
-  height: 100vh;
+  height: 125vh;
   background: #fff;
   background-image: url("/bg.jpg");
   background-image:

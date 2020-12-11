@@ -44,7 +44,7 @@ export default {
   }
 
   &__content {
-    padding: calc(var(--space) / 2);
+    padding: calc(var(--space) / 3);
   }
 
   &__image {
@@ -54,6 +54,11 @@ export default {
   &__title {
     font-family: 'Norican', cursive;
     margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  &__description {
+    font-size: 0.8rem;
   }
 
   &:hover {

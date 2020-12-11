@@ -99,6 +99,7 @@ export default {
 
 .footer-container {
   position: relative;
+  margin-top: 240px;
 }
 
 .footer {

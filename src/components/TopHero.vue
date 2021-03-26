@@ -38,14 +38,15 @@ export default {
 
   &__brand {
     flex: 1;
-    padding-top: 100px;
     text-align: center;
     font-family: 'Noto Serif JP', serif;
     color: var(--bg-color);
     font-size: 2.8rem;
     writing-mode: vertical-rl;
     letter-spacing: 0.05em;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .scroll-down-container {

@@ -12,10 +12,10 @@ description: "プログラミングスキルのこと"
 
 ### 業務経験のある言語
 
-- JavaScript, Java, Python, C#, Ruby, その他諸々
+- JavaScript, Java, Python, C#, Ruby, PHP, その他諸々
 
 ### 業務経験はないけどほんのり程度触れる言語
-(または勉強中である言語)
+(または習得を目指して勉強中である言語)
 
 - Rust, Erlang, Elixir
 
@@ -27,7 +27,7 @@ description: "プログラミングスキルのこと"
 　情報系大学時代にC++,Java,PHP等々で遊ぶ<br>
 
 〜10年代初頭<br>
-　SIer時代にVB6, VB.NET, C#, ASP.NET, MSSQL, Oracleあたりの技術スタックを得る<br>
+　SIer時代にVB6, VB.NET, C#, ASP.NET, MSSQL, Oracle(PL/SQL)あたりの技術スタックを得る<br>
 　(独立を視野に入れつつ上記以外の新しい技術を身につけるべく奮闘してた時代)<br>
 
 10年代中旬〜後半<br>

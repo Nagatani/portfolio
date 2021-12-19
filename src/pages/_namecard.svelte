@@ -52,7 +52,7 @@
 	margin: var(--space) auto;
 	position: relative;
 	width: 640px;
-	max-width: 95%;
+	max-width: 95vw;
 	overflow: hidden;
   aspect-ratio: 91 / 55;
 

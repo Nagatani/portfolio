@@ -1,0 +1,37 @@
+// Default variables
+:root {
+	--base-font-size: 16pt;
+
+	--bg-color: #f8fbf8;
+ 	--bg-content-color: #fff;
+ 	--bg-code: #fffbf3;
+ 	--body-color: #444;
+ 	--title-color: #111;
+ 	--link-color: #6b17e6;
+ 	--border-color:  rgba(0,0,0,.1);;
+  --space: 4rem;
+  --content-width: 860px;
+  --header-height: 100vh;
+	--radius: 5px;
+
+	--dark-087: rgba(0,0,0,0.87);
+	--dark-054: rgba(0,0,0,0.54);
+	--dark-026: rgba(0,0,0,0.26);
+	--dark-012: rgba(0,0,0,0.12);
+	--light-100: rgba(255,255,255,1.00);
+	--light-070: rgba(255,255,255,0.70);
+	--light-030: rgba(255,255,255,0.30);
+	--light-012: rgba(255,255,255,0.12);
+	--gray-010: #f1f1f1;
+	--gray-020: #e4e4e4;
+}
+
+// Make  things smaller for mobile
+@media screen and (max-width: 650px) {
+	html {
+		--base-font-size: 10pt;
+	}
+	body {
+		--header-height: 60px;
+	}
+}

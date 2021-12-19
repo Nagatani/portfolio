@@ -1,8 +1,7 @@
-*.log
-.cache
+/node_modules/
+/public/build/
+
 .DS_Store
-src/.temp
-node_modules
-dist
-.env
-.env.*
+
+/.vscode/
+/.routify/

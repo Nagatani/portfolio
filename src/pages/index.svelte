@@ -4,6 +4,9 @@
   import Paper from "./_paper.svelte";
   import Posts from "./_posts.svelte";
   import Footer from "./_footer.svelte";
+
+  $: document.title = "Hello, World!! - @Nagatani";
+
 </script>
 
 <main>

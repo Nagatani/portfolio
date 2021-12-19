@@ -19,9 +19,4 @@
 <Footer />
 
 <style lang="scss">
-  main {
-    h1 {
-      color: red;
-    }
-  }
 </style>

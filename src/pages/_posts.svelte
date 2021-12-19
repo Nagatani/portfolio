@@ -100,12 +100,6 @@
       content: "'";
       color: var(--dark-026);
     }
-
-    .card__footer {
-      display: flex;
-      padding: 1rem;
-      margin-top: auto;
-    }
   }
 }
 </style>

@@ -84,33 +84,12 @@
   color: #555;
 }
 
-.post-description {
-  font-size: 0.8rem;
-}
-
 .post-card__content {
   padding: calc(var(--space) / 3);
 }
 
 .post-card__image {
   min-width: 100%;
-}
-
-.post-card__tags {
-  z-index: 1;
-  position: relative;
-}
-
-.post-card__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.0;
-  overflow: hidden;
-  text-indent: -9999px;
-  z-index: 0;
 }
 
 @media screen and (max-width: 1024px) {

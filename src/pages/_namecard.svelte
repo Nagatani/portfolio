@@ -87,15 +87,12 @@
 		position: relative;
 
 		color: var(--body-color);
-		h2, h3 {
+		h2 {
     	text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
 			color: var(--body-color);
 			font-size: 1.5rem;
 			margin: 0;
 			line-height: 1.5;
-		}
-		h3 {
-			font-size: 1rem;
 		}
 	}
 	
@@ -142,8 +139,7 @@
 		text-align: right;
 		margin: 0;
 		padding: 0;
-		img,
-		svg {
+		img {
 			box-sizing: content-box;
 			line-height: 1;
 			width: 40px;
@@ -159,18 +155,13 @@
 		&__info {
 			padding: .5rem;
 			justify-content: flex-start;
-			h2, h3 {
+			h2 {
 				font-size: 1rem;
-			}
-			h3 {
-				font-size: .5rem;
 			}
 		}
 		&__links {
 			bottom: .5rem;
 			font-size: 0.5rem;
-
-			img,
 			svg {
 				width: 20px;
 				height: 20px;

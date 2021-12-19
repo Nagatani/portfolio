@@ -105,4 +105,12 @@
     }
   }
 }
+
+@media screen and (max-width: 650px) {
+  .top-hero {
+    &__brand {
+      font-size: 1.8rem;
+    }
+  }
+}
 </style>

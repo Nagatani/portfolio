@@ -157,15 +157,12 @@
           }
         }
       }
-      h4,p {
+      h4 {
         color: var(--bg-color);
         font-size: 1.25rem;
         line-height: 1.6;
         margin: 0;
         padding: 0 0 1rem;
-      }
-      p {
-        font-size: .9rem;
       }
     }
     #menu-button:checked + .menu-opener {

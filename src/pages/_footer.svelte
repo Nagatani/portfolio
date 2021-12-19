@@ -39,10 +39,6 @@
     margin: 0 .35em;
   }
 
-  a {
-    color: currentColor;
-  }
-
   p {
     span {
       font-size: 3rem;

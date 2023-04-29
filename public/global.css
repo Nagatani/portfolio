@@ -81,7 +81,6 @@ table {
   html {
     --base-font-size: 10pt;
   }
-
   body {
     --header-height: 60px;
   }
@@ -104,7 +103,7 @@ body {
   background-color: var(--bg-color);
   color: var(--body-color);
   transition: color 0.6s, background-color 0.6s;
-  font-family: "Hina Mincho", serif;
+  font-family: "BIZ UDPMincho", serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
@@ -123,10 +122,11 @@ img {
 }
 
 :root {
-  font-family: "Noto Serif JP", serif;
+  font-family: "BIZ UDPMincho", serif;
   font-size: var(--base-font-size);
   font-weight: 400;
   line-height: 1.6;
+  font-display: fallback;
 }
 
 p {
@@ -137,7 +137,6 @@ h1, h2, h3, h4, h5 {
   transition: color 0.6s;
   color: var(--title-color);
   margin: 2.75rem 0 1rem;
-  font-weight: 600;
   line-height: 1.15;
 }
 
@@ -241,7 +240,7 @@ pre[class*=language-] {
 
 @media print {
   code[class*=language-],
-pre[class*=language-] {
+  pre[class*=language-] {
     text-shadow: none;
   }
 }
@@ -296,7 +295,7 @@ pre[class*=language-] {
 .language-css .token.string,
 .style .token.string {
   color: #9a6e3a;
-  background: rgba(255, 255, 255, 0.5);
+  background: hsla(0, 0%, 100%, 0.5);
 }
 
 .token.atrule,

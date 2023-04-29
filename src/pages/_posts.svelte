@@ -78,11 +78,14 @@
     .card__body h3,
     .card__body h4,
     .card__body p {
-      font-family: 'Azeret Mono', monospace;
+      font-family: 'Azeret Mono', 'BIZ UDGothic', monospace;
       font-size: 0.75rem;
       margin: 0;
       padding: 0;
       color: var(--dark-054);
+    }
+    .card__body p {
+	    font-family: 'BIZ UDPMincho', serif;
     }
     .card__body h3::before {
       content: "# cat '";

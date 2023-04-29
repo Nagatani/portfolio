@@ -53,7 +53,7 @@
   .logo {
     text-decoration: none;
     color: var(--bg-color) !important;
-    font-family: 'Azeret Mono', monospace;
+    font-family: 'Azeret Mono', 'BIZ UDGothic', monospace;
     pointer-events: all;
     display: flex;
     flex-direction: column;

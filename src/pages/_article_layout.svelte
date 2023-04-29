@@ -51,7 +51,7 @@
 }
 
 .post-title {
-  font-family: 'Azeret Mono', monospace;
+  font-family: 'Azeret Mono', 'BIZ UDGothic', monospace;
   position: absolute;
   bottom: 0;
   left: 0;

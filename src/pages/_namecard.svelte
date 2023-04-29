@@ -118,6 +118,7 @@
 				line-height: 1.8;
 				a {
 					color: var(--body-color);
+  				font-family: 'Azeret Mono', 'BIZ UDGothic', monospace;
 					transition: all .3s;
 					text-decoration: none;
 					&:hover {

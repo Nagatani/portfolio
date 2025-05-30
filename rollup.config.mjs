@@ -2,11 +2,17 @@ import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import sveltePreprocess, { sass } from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import { mdsvex } from "mdsvex";
+import alias from '@rollup/plugin-alias';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -40,6 +46,11 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		alias({
+			entries: [
+				{ find: 'src', replacement: path.resolve(__dirname, 'src') }
+			]
+		}),
 		svelte({
 			extensions: ['.svelte', '.svx', '.md'],
 			preprocess: [
@@ -68,12 +79,13 @@ export default {
 		// https://github.com/rollup/plugins/tree/master/packages/commonjs
 		resolve({
 			browser: true,
-			dedupe: ['svelte']
+			dedupe: ['svelte'],
+			extensions: ['.mjs', '.js', '.json', '.node', '.svelte'] // Add .svelte
 		}),
 		commonjs(),
 		typescript({
-			sourceMap: !production,
-			inlineSources: !production
+			sourceMap: true, // Align with main output.sourcemap
+			inlineSources: !production // Keep this as is for now
 		}),
 
 		// In dev mode, call `npm run start` once

@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/svelte';
 import App from './App.svelte';
-import { استعمال } from '@roxi/routify'; // routify のモックのため
 
 // Routify の $url ストアをモックする
 // App.svelte内で $url が参照されているため、テスト実行時にエラーになるのを防ぐ
@@ -19,21 +18,17 @@ vi.mock('@roxi/routify', async (importOriginal) => {
     // routes が未定義であるというエラーを回避するためにモックが必要
     // ただし、実際に Router コンポーネントがどのように使われているかによって調整が必要
     Router: MockRouter, // Use the dynamically imported mock Svelte component
-    // layout, isIndex, component などのプロパティを持つオブジェクトを返すようにする
-    // これらはRoutifyがページコンポーネントに渡す典型的なプロパティ
-    // App.svelte やその子コンポーネントで使われている可能性がある
-    // 具体的な値は実際のコンポーネントの実装に依存する
-    // ここでは、エラーを回避するための最小限のモックを提供する
-    // استعمال: vi.fn(() => ({ subscribe: vi.fn(callback => { callback({ component: {}, layout: {}, isIndex: true }); return () => {}; }) })),
-    // استعمال が関数として呼び出されている場合
-    استعمال: vi.fn(() => ({
-       subscribe: vi.fn((run: (value: Record<string, unknown>) => void) => {
-         // 初期値を設定。App.svelte の <Route> が props を期待している場合、
-         // 適切な props を持つオブジェクトを渡す必要がある。
-         // ここでは空のオブジェクトを渡しているが、必要に応じて調整する。
-         run({ component: { default: {} }, params: {} });
-         return () => {}; // unsubscribe 関数
-       })
+    // Mock for the $page store from Routify
+    page: vi.fn(() => ({
+      subscribe: vi.fn((run: (value: Record<string, unknown>) => void) => {
+        // Provides minimal page object structure needed for App.svelte
+        run({
+          component: { default: {} }, // Mocked page component
+          params: {},                 // Mocked route params
+          // Add other properties like 'path', 'meta' if App.svelte depends on them
+        });
+        return () => {}; // Unsubscribe function
+      })
     })),
   };
 });

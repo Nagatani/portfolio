@@ -16,10 +16,10 @@
 .name-card {
   height: 125vh;
   background: #fff;
-  background-image: url("/images/bg.jpg");
+  background-image: url("/images/bg.webp");
   background-image:
       linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%),
-      url("/images/bg.jpg");
+      url("/images/bg.webp");
   background-blend-mode: multiply,multiply;
   background-size: cover;
   background-repeat: no-repeat;

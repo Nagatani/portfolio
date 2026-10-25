@@ -24,7 +24,7 @@
   background:#181D26;
   background-image:
     linear-gradient(to top, hsla(177, 66%, 79%, 0.3) 0%, hsla(341, 95%, 92%, 0.3) 100%),
-    url("/images/tome.jpg");
+    url("/images/tome.webp");
   background-size: cover;
   background-position-x: 40%;
   background-position-y: 75%;

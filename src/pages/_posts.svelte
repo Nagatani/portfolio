@@ -1,9 +1,9 @@
 <script lang="ts">
   import {url, isActive} from '@roxi/routify';
   const links = [
-    ['/about-programming', 'About Programming', 'プログラミングのこと', '/images/article/fatos-bytyqi-Agx5_TLsIf4-unsplash.jpg', 'プログラミングなんもわからん'],
-    ['/about-part-time-instructor', 'About Part-time Instructor', '非常勤講師のこと', '/images/article/priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg', '人にもの教えるの本当にわからん'],
-    ['/about-research-and-development', 'About R&D', '研究・開発のこと', '/images/article/fabio-oyXis2kALVg-unsplash.jpg', '進捗はありません！！１']
+    ['/about-programming', 'About Programming', 'プログラミングのこと', '/images/article/fatos-bytyqi-Agx5_TLsIf4-unsplash-thumb.webp', 'プログラミングなんもわからん'],
+    ['/about-part-time-instructor', 'About Part-time Instructor', '非常勤講師のこと', '/images/article/priscilla-du-preez-Q7wGvnbuwj0-unsplash-thumb.webp', '人にもの教えるの本当にわからん'],
+    ['/about-research-and-development', 'About R&D', '研究・開発のこと', '/images/article/fabio-oyXis2kALVg-unsplash-thumb.webp', '進捗はありません！！１']
   ]
 </script>
 
@@ -13,7 +13,7 @@
     {#each links as [path, name, desc, thumb, lead]}
     <a class="card" href={ $url(path) } class:active={$isActive(path)}>
       <div class="card__header">
-        <img src="{ thumb }" alt="card__image" class="card__image" width="600">
+        <img src="{ thumb }" alt="card__image" class="card__image" width="800" height="450" loading="lazy" decoding="async">
       </div>
       <div class="card__body">
         <h3>{ name }</h3>

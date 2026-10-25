@@ -17,7 +17,7 @@
       <h1 class="post-title__text">{ title }</h1>
       <h2>{ description }</h2>
     </div>
-    <img alt="Cover_image" class="post-card__image" src="{ cover_image }" />
+    <img alt="Cover_image" class="post-card__image" src="{ cover_image }" fetchpriority="high" />
   </div>
 
   <div class="post-card__content">

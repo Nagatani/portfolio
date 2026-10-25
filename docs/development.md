@@ -24,6 +24,7 @@ npm ci
 | `npm run dev` | Vite開発サーバーを起動（`0.0.0.0`で待ち受け、HMRあり）。http://localhost:5173 |
 | `npm run build` | 本番ビルド。`dist/client/`に出力 |
 | `npm run preview` | ビルド結果をローカルで配信して確認。http://localhost:4173 |
+| `npm run image` | 画像をWebPに変換・縮小（[content.md](content.md#画像)を参照） |
 | `npm run check` | `svelte-check`による型チェック |
 
 ## 型チェックについて

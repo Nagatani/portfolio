@@ -58,6 +58,16 @@ npx firebase-tools@15 deploy --only hosting
 
 - `public`: `dist/client`（Viteのビルド出力先）
 - `rewrites`: 全パスを`/index.html`に向ける（SPAのため）
+- `headers`: ブラウザキャッシュの期間（Cache-Control）を設定
+
+| 対象 | Cache-Control | 理由 |
+| --- | --- | --- |
+| `/assets/**` | `public, max-age=31536000, immutable`（1年） | Viteがファイル名にハッシュを付けるため、内容が変わればURLも変わる |
+| `/images/**` | `public, max-age=604800`（7日） | 画像を差し替えるときはファイル名を変える |
+| HTML（`/`、`/index.html`、拡張子のないパス） | `no-cache` | デプロイ後すぐに新しい`/assets/`を参照させるため（毎回ETagで更新を確認） |
+
+ヘッダーはリライト前のURLで判定されます。パターンが重なると適用順が分かりにくいため、重ならないように書いています。
+ローカルでは`npx firebase-tools@15 emulators:start --only hosting`でヘッダーを確認できます。
 
 ## 経緯
 

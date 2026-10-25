@@ -1,6 +1,6 @@
 ---
 title: About Part-time Instructor
-cover_image: /images/article/priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg
+cover_image: /images/article/priscilla-du-preez-Q7wGvnbuwj0-unsplash.webp
 description: "大学の非常勤講師や、高校の実習教科指導のこと"
 ---
 

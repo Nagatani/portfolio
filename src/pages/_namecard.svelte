@@ -36,13 +36,13 @@
     </div>
 
     <div class="namecard__snsicons">
-      <a href="//twitter.com/Nagatani"><img alt="twitter icon" class="namecard__snsicon_tw" src="/images/tw_prof.jpg" width="200" height="200" /></a>
-      <a href="//github.com/Nagatani"><img alt="github icon" class="namecard__snsicon_gh" src="/images/gh_prof.jpg" width="200" height="200" /></a>
+      <a href="//twitter.com/Nagatani"><img alt="twitter icon" class="namecard__snsicon_tw" src="/images/tw_prof.webp" width="200" height="200" loading="lazy" decoding="async" /></a>
+      <a href="//github.com/Nagatani"><img alt="github icon" class="namecard__snsicon_gh" src="/images/gh_prof.webp" width="200" height="200" loading="lazy" decoding="async" /></a>
     </div>
 
   </section>
   <div class="namecard__image-container">
-    <img alt="namecard_image" class="namecard__image" src="/images/author.jpg" width="300" height="300" />
+    <img alt="namecard_image" class="namecard__image" src="/images/author.webp" width="300" height="300" loading="lazy" decoding="async" />
   </div>
 </div>
 

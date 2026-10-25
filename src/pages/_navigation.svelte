@@ -18,8 +18,8 @@
     <input type="checkbox" id="menu-button">
     <div class="menu-opener">
       <label for="menu-button">
-        <!-- svelte-ignore a11y-missing-attribute -->
-        <a class="menu-trigger">
+        <!-- svelte-ignore a11y_missing_attribute -->
+        <a class="menu-trigger" aria-label="メニュー">
           <span></span>
           <span></span>
           <span></span>

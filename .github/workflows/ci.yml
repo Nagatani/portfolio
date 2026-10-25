@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  # master への push: ビルド → 型チェック → Firebase Hosting へデプロイ
+  push:
+    branches: [master]
+  # PR: チェックとビルドのみ（デプロイしない）
+  pull_request:
+    branches: [master]
+  # Actions 画面から手動実行（master で実行した場合のみデプロイ）
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # PR は最新の push だけ検証すればよいので古い実行を止める。デプロイは途中で止めない
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # 型チェックはビルド時に生成される .routify/ を参照するため、ビルドの後に実行する
+      - name: Build
+        run: npm run build
+
+      - name: Type check
+        run: npm run check
+
+      # Base64 エンコードしたサービスアカウントキーを復元する（リポジトリ外の一時ディレクトリに置く）
+      - name: Restore service account key
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+        run: echo "$GCLOUD_SERVICE_KEY" | base64 --decode > "$RUNNER_TEMP/service-account.json"
+        env:
+          GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
+
+      - name: Deploy to Firebase Hosting
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+        run: npx --yes firebase-tools@15 deploy --only hosting --non-interactive
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/service-account.json

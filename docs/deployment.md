@@ -1,0 +1,66 @@
+# デプロイ
+
+Firebase Hosting（プロジェクト: `nagatani-profile`）で`dist/client`を配信しています。
+デプロイはGitHub Actionsで自動化しています。
+
+## GitHub Actions（`.github/workflows/ci.yml`）
+
+| トリガー | 実行内容 |
+| --- | --- |
+| `master`へのpush | ビルド→型チェック→ Firebase Hostingへデプロイ |
+| `master`向けのPR | ビルド→型チェック（デプロイしない） |
+| 手動実行（workflow_dispatch） | `master`で実行した場合のみデプロイまで行う |
+
+### ジョブの流れ
+
+1. リポジトリをチェックアウト
+2. `.node-version`のNode.jsをセットアップ（npmキャッシュあり）
+3. `npm ci`
+4. `npm run build`
+5. `npm run check`（`.routify/`を参照するため、ビルドの後に実行）
+6. シークレット`GCLOUD_SERVICE_KEY`を復号し、ランナーの一時ディレクトリにサービスアカウントキーとして保存（`master`のみ）
+7. `npx firebase-tools@15 deploy --only hosting`でデプロイ（`master`のみ）
+
+### その他の設定
+
+- ワークフローの権限は`contents: read`のみです。
+- 同じブランチで実行が重なった場合、PRでは古い実行を中止します。デプロイは途中で中止しません。
+
+## シークレット
+
+| シークレット名 | 内容 | 状態 |
+| --- | --- | --- |
+| `GCLOUD_SERVICE_KEY` | サービスアカウントキー（JSON）をBase64エンコードしたもの | 使用中 |
+| `FIREBASE_TOKEN` | 旧方式の認証トークン | 未使用（削除可） |
+
+## サービスアカウントキーを更新する
+
+デプロイのステップが認証エラーで失敗する場合は、キーを発行し直します。
+
+1. Google Cloudコンソールで、プロジェクト`nagatani-profile`のサービスアカウントキー（JSON）を発行する。サービスアカウントには「Firebase Hosting 管理者」ロールが必要です。
+2. Base64エンコードしてGitHubのシークレット`GCLOUD_SERVICE_KEY`に登録する。
+
+   ```sh
+   base64 -i service-account.json | gh secret set GCLOUD_SERVICE_KEY
+   ```
+
+3. 手元のキーファイルは削除する。
+
+## 手動でデプロイする
+
+```sh
+npx firebase-tools@15 login   # 初回のみ
+npm run build
+npx firebase-tools@15 deploy --only hosting
+```
+
+## Hostingの設定（`firebase.json`）
+
+- `public`: `dist/client`（Viteのビルド出力先）
+- `rewrites`: 全パスを`/index.html`に向ける（SPAのため）
+
+## 経緯
+
+公開中ファイルの更新日時から、2023年4月29日以降は公開サイトが更新されていなかったことが分かっています。
+GitHub Actionsの実行履歴が残っていないため、失敗の原因（Node.js 16での実行、認証キーの失効など）は特定できていません。
+2026年10月の依存パッケージ更新にあわせて、Node.jsのバージョン指定、ビルド出力先、Firebase CLIの実行方法を見直しています。

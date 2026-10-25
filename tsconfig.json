@@ -1,9 +1,15 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "types": ["svelte", "vite/client"],
     "verbatimModuleSyntax": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": false,
+    "moduleDetection": "force"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
 }

@@ -1,7 +1,7 @@
 ---
 title: About Programming
 description: プログラミングスキル及びその他のこと
-cover_image: "/images/article/fatos-bytyqi-Agx5_TLsIf4-unsplash.jpg"
+cover_image: "/images/article/fatos-bytyqi-Agx5_TLsIf4-unsplash.webp"
 ---
 
 かれこれ20年以上やってるけど、自信なんてものはない。  

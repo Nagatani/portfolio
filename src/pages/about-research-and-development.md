@@ -1,6 +1,6 @@
 ---
 title: About Research & Development
-cover_image: /images/article/fabio-oyXis2kALVg-unsplash.jpg
+cover_image: /images/article/fabio-oyXis2kALVg-unsplash.webp
 description: "研究・開発のこと"
 ---
 

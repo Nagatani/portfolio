@@ -1,7 +1,8 @@
+import { mount } from 'svelte';
 import App from './App.svelte';
-import './pages/_article_layout.svelte'; // Ensure Rollup sees this
+import './style/index.scss';
 
-const app = new App({
+const app = mount(App, {
 	target: document.body,
 	props: {}
 });

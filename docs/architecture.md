@@ -64,7 +64,7 @@ Routifyのファイルベースルーティングにより、ファイル名が�
 | `privacy-policy.md` | `/privacy-policy`（プライバシーポリシー） |
 | `_module.svelte` | 全ページ共通レイアウト（ナビゲーションのリンク一覧を定義） |
 | `_article.svelte` | mdsvexの記事レイアウト（frontmatterの`title` / `description` / `cover_image`を使用） |
-| `_navigation.svelte` | 固定ヘッダーとハンバーガーメニュー |
+| `_navigation.svelte` | 固定ヘッダーとハンバーガーメニュー。メニューは左へ45度傾いた紺色の紙に書かれていて、開くと紙ごと右上から左下へ滑り込む。リンクのクリック・Escキー・外側のクリックで閉じる。傾きや大きさは冒頭のCSS変数（`--paper-angle`など）で調整 |
 | `_hero.svelte` / `_lead.svelte` / `_paper.svelte` | トップページの各セクション |
 | `_posts.svelte` | トップページの記事カード一覧 |
 | `_namecard.svelte` | 名刺（連絡先・SNSリンク）。トップと記事ページの下部で使用 |

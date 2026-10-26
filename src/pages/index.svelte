@@ -4,8 +4,9 @@
   import Paper from "./_paper.svelte";
   import Posts from "./_posts.svelte";
   import Footer from "./_footer.svelte";
+  import { SITE_TITLE } from "../site";
 
-  $: document.title = "Hello, World!! - @Nagatani";
+  $: document.title = SITE_TITLE;
 
 </script>
 

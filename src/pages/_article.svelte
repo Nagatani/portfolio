@@ -3,8 +3,10 @@
   export let description;
   export let cover_image = "";
 
-  $: document.title = title + " - " + document.title;
+  // 前のページのタイトルを引き継がないよう、毎回サイト名から組み立てる
+  $: document.title = `${title} - ${SITE_TITLE}`;
 
+  import { SITE_TITLE } from "../site";
   import NameCard from "./_namecard.svelte";
   import Footer from "./_footer.svelte";
 </script>

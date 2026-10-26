@@ -72,6 +72,26 @@ mdsvexにより、Markdown内で`<script>`を書いてSvelteコンポーネン�
 - コンポーネント固有のスタイルは各`.svelte`ファイル内の`<style lang="scss">`に書きます。
 - フォントは`index.html`でGoogle Fonts（Azeret Mono / BIZ UDGothic / BIZ UDPMincho）を読み込んでいます。
 
+## SNSで共有したときの表示（OGP）
+
+`index.html`にサイト共通のOGP（タイトル、説明文、画像）を設定しています。
+SNSのクローラーはJavaScriptを実行しないため、どのページを共有しても同じ内容が表示されます。
+
+| 項目 | 設定場所 |
+| --- | --- |
+| 説明文 | `index.html`の`description`と`og:description`（2か所とも同じ文章にする） |
+| 画像 | `public/images/ogp.jpg`（1200×630） |
+| Xのアカウント | `index.html`の`twitter:site` |
+
+OGP画像は`scripts/generate-ogp.mjs`で、トップページの背景画像にキャッチコピーなどを重ねて生成しています。
+
+```sh
+node scripts/generate-ogp.mjs public/images/tome.webp public/images/ogp.jpg
+```
+
+文字の描画にmacOSのフォント（ヒラギノ明朝、Menlo）を使うため、macOSで実行してください。
+画像を差し替えたあとは、SNS側のキャッシュが残ることがあるため、ファイル名を変える（例: `ogp-2.jpg`）と確実に反映されます。
+
 ## 画像
 
 `public/`以下に置いたファイルは、ビルド時にそのまま`dist/client/`へコピーされ、`/images/...`のような絶対パスで参照できます。

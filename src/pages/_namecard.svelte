@@ -16,15 +16,16 @@
             </svg>
           </span> hey@nagatani.me</a>
         </li>
-        <li><a href="//twitter.com/Nagatani">
-          <span class="ti ti-brand-twitter">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <li><a href="https://x.com/Nagatani">
+          <span class="ti ti-brand-x">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"></path>
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
             </svg>
           </span> @Nagatani</a>
         </li>
-        <li><a href="//github.com/Nagatani">
+        <li><a href="https://github.com/Nagatani">
           <span class="ti ti-brand-github">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -36,8 +37,8 @@
     </div>
 
     <div class="namecard__snsicons">
-      <a href="//twitter.com/Nagatani"><img alt="twitter icon" class="namecard__snsicon_tw" src="/images/tw_prof.webp" width="200" height="200" loading="lazy" decoding="async" /></a>
-      <a href="//github.com/Nagatani"><img alt="github icon" class="namecard__snsicon_gh" src="/images/gh_prof.webp" width="200" height="200" loading="lazy" decoding="async" /></a>
+      <a href="https://x.com/Nagatani"><img alt="X icon" class="namecard__snsicon_tw" src="/images/tw_prof.webp" width="200" height="200" loading="lazy" decoding="async" /></a>
+      <a href="https://github.com/Nagatani"><img alt="github icon" class="namecard__snsicon_gh" src="/images/gh_prof.webp" width="200" height="200" loading="lazy" decoding="async" /></a>
     </div>
 
   </section>

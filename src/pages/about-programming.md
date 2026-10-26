@@ -20,7 +20,7 @@ cover_image: "/images/article/fatos-bytyqi-Agx5_TLsIf4-unsplash.webp"
 ##### 90年代後半〜00年代中旬
 - N88BASICでプログラミング入門
 - 高校時代にVB, C, Z80アセンブリ, PICマイコンなどの電子工作やポケコンなどで遊ぶ
-- 工業系大学の工学部時代にC++, Java, PHP等々で遊ぶ
+- 工業系大学の工学部時代にC++, Java, PHPなどなどで遊ぶ
 
 ##### 〜10年代初頭
 - SIer時代にVB6, VB.NET, C#, ASP.NET, MSSQL, Oracle(PL/SQL)あたりの技術スタックを得る
@@ -31,11 +31,15 @@ cover_image: "/images/article/fatos-bytyqi-Agx5_TLsIf4-unsplash.webp"
   + フロントエンドエンジニアを名乗ることもあるけど、正直やりたいことが実現できるならフロントだけにこだわるつもりもないです。
 
 ##### 20年代〜現在
+- システム開発、技術相談、研修・講義、講演など、気づけば手広くやらせてもらっている
 - 猫になりたい
 
 
 
 <br>
+
+なにかお手伝いできそうなことがあれば、[お仕事のご依頼](/work)からどうぞ。
+
 <br>
 <br>
 

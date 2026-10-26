@@ -4,7 +4,7 @@ cover_image: /images/article/priscilla-du-preez-Q7wGvnbuwj0-unsplash.webp
 description: "大学の非常勤講師や、高校の実習教科指導のこと"
 ---
 
-大学の非常勤講師や、高校の実習教科指導のこと
+人にものを教えるのは本当にわからん、と思いながら、かれこれ十数年。
 
 ### 工業系大学の情報科非常勤講師
 
@@ -15,7 +15,7 @@ description: "大学の非常勤講師や、高校の実習教科指導のこと
 科目は演習専門で、以下の通りです。
 
 1. プログラミング演習
-    - Java, Python, Ruby, JavaScript等
+    - Java, Python, Ruby, JavaScriptなど
     - オブジェクト指向プログラミングの講義での使用言語は主にJava,Pythonです。
 2. Webデザイン演習
     - HTML, CSS, JavaScriptを用いたWebサイト構築の一連の流れを実習形式で行っています。
@@ -32,6 +32,9 @@ description: "大学の非常勤講師や、高校の実習教科指導のこと
 
 
 <br>
+
+研修・講義や講演・セミナーのご相談は、[お仕事のご依頼](/work)からどうぞ。
+
 <br>
 <br>
 

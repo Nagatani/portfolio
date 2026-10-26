@@ -23,11 +23,12 @@
 ├── docs/                       # このドキュメント
 ├── firebase.json               # Hosting 設定（dist/client を配信、全パスを index.html へリライト）
 ├── .firebaserc                 # Firebase プロジェクト指定
-├── index.html                  # エントリ HTML（Google Fonts 読み込み、src/main.ts を読み込む）
+├── index.html                  # エントリ HTML（OGP・meta、Google Fonts、src/main.ts の読み込み）
 ├── vite.config.js              # Vite 設定（Routify プラグインなど）
 ├── svelte.config.js            # Svelte 設定（preprocess、mdsvex）
 ├── tsconfig.json
 ├── dist/client/                # ビルド出力先 ※gitignore
+├── scripts/                    # 画像変換（optimize-image.mjs）、OGP 画像生成（generate-ogp.mjs）
 ├── public/                     # 静的ファイル（ビルド時にそのまま dist/client へコピー）
 │   ├── images/                 # 画像（記事カバー、背景、プロフィール等）
 │   └── manifest.json / robots.txt / favicon.png / 404.svg
@@ -69,7 +70,6 @@ Routifyのファイルベースルーティングにより、ファイル名が�
 | `_namecard.svelte` | 名刺（連絡先・SNSリンク）。トップと記事ページの下部で使用 |
 | `_footer.svelte` | フッター（お仕事のご依頼・プライバシーポリシーへのリンク） |
 | `_mail-button.svelte` | 件名・本文入りのメール作成画面を開くボタン（`work.md`で使用） |
-| `nested.svelte` / `subpage.svelte` | 動作確認用のサンプルページ（`/nested`・`/subpage`として公開されます） |
 
 ルート定義はVite起動時・ビルド時に`.routify/`へ自動生成されます（gitignore済み）。
 `App.svelte`は生成された`.routify/routes.default.js`を読み込んでいます。

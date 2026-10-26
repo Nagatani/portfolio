@@ -1,8 +1,8 @@
 {
-  "background_color": "#ffffff",
-  "theme_color": "#E938C2",
-  "name": "Routify app",
-  "short_name": "Routify app",
+  "background_color": "#f8fbf8",
+  "theme_color": "#2c3e50",
+  "name": "Hello, World!! - @Nagatani",
+  "short_name": "@Nagatani",
   "start_url": "/",
   "display": "standalone",
   "icons": [

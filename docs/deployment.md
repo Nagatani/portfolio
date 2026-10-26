@@ -66,8 +66,27 @@ npx firebase-tools@15 deploy --only hosting
 | `/images/**` | `public, max-age=604800`（7日） | 画像を差し替えるときはファイル名を変える |
 | HTML（`/`、`/index.html`、拡張子のないパス） | `no-cache` | デプロイ後すぐに新しい`/assets/`を参照させるため（毎回ETagで更新を確認） |
 
-ヘッダーはリライト前のURLで判定されます。パターンが重なると適用順が分かりにくいため、重ならないように書いています。
+あわせて、すべてのパス（`**`）に`X-Robots-Tag: noindex`を付けています（下記「検索エンジンに登録しない設定」を参照）。
+
+ヘッダーはリライト前のURLで判定されます。Cache-Controlのパターンは、適用順がわかりにくくならないよう重ならないように書いています。
+`X-Robots-Tag`の`**`は他のパターンと重なりますが、ヘッダー名が異なるため両方が付くことをエミュレーターで確認しています。
 ローカルでは`npx firebase-tools@15 emulators:start --only hosting`でヘッダーを確認できます。
+
+## 検索エンジンに登録しない設定
+
+このサイトは、Google検索などの検索結果に表示しない方針です。URLを知っている人や、リンクからの訪問は通常どおりできます。
+
+| 設定 | 内容 |
+| --- | --- |
+| `index.html` | `<meta name="robots" content="noindex">` |
+| `firebase.json` | すべてのパスに`X-Robots-Tag: noindex`ヘッダー（画像なども対象） |
+| `public/robots.txt` | クロールは許可したまま（`Allow: /`） |
+
+`robots.txt`で`Disallow`にすると、検索エンジンが`noindex`の指定を読めなくなり、外部からリンクされたURLが検索結果に残ることがあります。そのため、クロールは許可したうえで`noindex`で登録を止めています。
+
+SNSでの共有時の表示（OGP）は`noindex`の影響を受けません。
+
+すでに検索結果に出ているページは、検索エンジンが次に巡回したときに削除されます。早く消したい場合は、Google Search Consoleの「削除」ツールで一時的に非表示にできます。
 
 ## 経緯
 

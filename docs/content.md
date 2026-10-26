@@ -32,7 +32,24 @@
 | --- | --- |
 | `title` | 記事タイトル。ページの`<title>`の先頭にも付きます |
 | `description` | タイトル下に表示する説明 |
-| `cover_image` | 記事上部のカバー画像のパス（`public/`からの絶対パス） |
+| `cover_image` | 記事上部のカバー画像のパス（`public/`からの絶対パス）。省略するとタイトルだけを表示します |
+
+### Markdownページでコンポーネントを使う
+
+mdsvexにより、Markdown内で`<script>`を書いてSvelteコンポーネントを使えます（例: `work.md`のメールボタン）。
+
+```markdown
+<script>
+  import MailButton from "./_mail-button.svelte";
+</script>
+
+<MailButton subject="件名" body="本文" />
+```
+
+## お仕事のご依頼・プライバシーポリシー
+
+- `src/pages/work.md`: 対応できるお仕事、お受けできないお仕事、お引き受けの条件、依頼時に伝えてほしい項目、料金の目安。メールボタンの本文テンプレートは同じファイルの`<script>`内の`body`で定義しています。依頼項目を変えるときは、本文の一覧と`body`の両方を更新してください。
+- `src/pages/privacy-policy.md`: 個人情報の取り扱い。アクセス解析やフォームなど、閲覧者の情報を扱う仕組みを追加したときは、内容を見直して「制定日」の下に改定日を追記してください。
 
 ## トップページを編集する
 

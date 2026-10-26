@@ -3,6 +3,10 @@
     <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
   </svg>
   <footer class="footer">
+    <nav class="footer__links">
+      <a href="/work">お仕事のご依頼</a>
+      <a href="/privacy-policy">プライバシーポリシー</a>
+    </nav>
     <span class="footer__copyright">Copyright © 2011-{ new Date().getFullYear() } @Nagatani All Rights Reserved. </span>
   </footer>
 </div>
@@ -44,6 +48,23 @@
       font-size: 3rem;
       display: inline-block;
       line-height: 1;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5em 2em;
+    margin-bottom: 1.5em;
+
+    a {
+      color: var(--bg-color);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

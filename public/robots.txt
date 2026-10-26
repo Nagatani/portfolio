@@ -1,2 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
+#
+# このサイトは検索結果に表示しない方針です。
+# ただし、ここで Disallow にすると検索エンジンが noindex の指定を読めなくなり、
+# 外部からリンクされた URL が検索結果に残る可能性があるため、クロール自体は許可しています。
+# 検索結果に出さない設定は、各ページの <meta name="robots" content="noindex"> と
+# firebase.json の X-Robots-Tag: noindex ヘッダーで行っています。
 User-agent: *
+Allow: /

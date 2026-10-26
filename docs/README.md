@@ -16,6 +16,7 @@
 - ホスティング: Firebase Hosting（プロジェクト: `nagatani-profile`）
 - 構成: Svelte 5 + Routify 3 + Vite 7によるSPA
 - デプロイ: `master`ブランチへのpushでGitHub Actionsが自動デプロイ
+- 検索エンジン: 登録しない設定（`noindex`）。詳しくは[deployment.md](deployment.md#検索エンジンに登録しない設定)
 
 ## クイックスタート
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   export let title;
   export let description;
-  export let cover_image;
+  export let cover_image = "";
 
   $: document.title = title + " - " + document.title;
 
@@ -12,12 +12,14 @@
 
 <div class="post-card content-box">
 
-  <div class="post-card__header">
+  <div class="post-card__header" class:post-card__header--no-image={!cover_image}>
     <div class="post-title">
       <h1 class="post-title__text">{ title }</h1>
       <h2>{ description }</h2>
     </div>
+    {#if cover_image}
     <img alt="Cover_image" class="post-card__image" src="{ cover_image }" fetchpriority="high" />
+    {/if}
   </div>
 
   <div class="post-card__content">
@@ -90,6 +92,17 @@
 
 .post-card__image {
   min-width: 100%;
+}
+
+/* カバー画像のないページ（プライバシーポリシーなど）はタイトルだけを表示する */
+.post-card__header.post-card__header--no-image {
+  aspect-ratio: auto;
+}
+.post-card__header--no-image .post-title {
+  position: static;
+  padding-top: calc(var(--space) / 3);
+  background: none;
+  border-bottom: 1px solid var(--border-color);
 }
 
 @media screen and (max-width: 1024px) {

@@ -59,13 +59,16 @@ Routifyのファイルベースルーティングにより、ファイル名が�
 | `about-programming.md` | `/about-programming`（プログラミングのこと） |
 | `about-part-time-instructor.md` | `/about-part-time-instructor`（非常勤講師のこと） |
 | `about-research-and-development.md` | `/about-research-and-development`（研究・開発のこと） |
+| `work.md` | `/work`（お仕事のご依頼。メールボタンで依頼項目入りのメールを作成） |
+| `privacy-policy.md` | `/privacy-policy`（プライバシーポリシー） |
 | `_module.svelte` | 全ページ共通レイアウト（ナビゲーションのリンク一覧を定義） |
 | `_article.svelte` | mdsvexの記事レイアウト（frontmatterの`title` / `description` / `cover_image`を使用） |
 | `_navigation.svelte` | 固定ヘッダーとハンバーガーメニュー |
 | `_hero.svelte` / `_lead.svelte` / `_paper.svelte` | トップページの各セクション |
 | `_posts.svelte` | トップページの記事カード一覧 |
 | `_namecard.svelte` | 名刺（連絡先・SNSリンク）。トップと記事ページの下部で使用 |
-| `_footer.svelte` | フッター |
+| `_footer.svelte` | フッター（お仕事のご依頼・プライバシーポリシーへのリンク） |
+| `_mail-button.svelte` | 件名・本文入りのメール作成画面を開くボタン（`work.md`で使用） |
 | `nested.svelte` / `subpage.svelte` | 動作確認用のサンプルページ（`/nested`・`/subpage`として公開されます） |
 
 ルート定義はVite起動時・ビルド時に`.routify/`へ自動生成されます（gitignore済み）。
